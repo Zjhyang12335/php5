@@ -1,8 +1,11 @@
 <?php
 header('content-type:text/html; charset=utf-8');// 设置编码格式
-$user_data = array(1=>array('username'=>'abc', 'password'=>'123'),
-                   2=>array('username'=>'test', 'password'=>'123'));// 合法的用户名密码
-                   
+
+require './init.php';// 连接数据库
+// 数据查询
+$sql = 'select id, username, password from user order by id desc';// 查询sql语句
+$stmt = $pdo->query($sql);// 执行查询语句，查询结果存储到PDOStatement对象
+$user_data = $stmt->fetchAll(PDO::FETCH_ASSOC);// 获取结果集，并且将结果集存储在数组data中
 if (isset($_POST['username']) && isset($_POST['password'])){// 判断是否提交了用户名密码
     $username = strtolower(trim($_POST['username']));
     $password = $_POST['password'];// 获取用户输入的用户名密码
@@ -14,7 +17,7 @@ if (isset($_POST['username']) && isset($_POST['password'])){// 判断是否提�
             session_start();
 //            向session中存入用户id和用户名
             $_SESSION['user'] = array('id'=>$k, 'username'=>$v['username']);
-            header('Location: showinfo.php');// 用户名密码正确时，页面跳转至个人信息
+            header('Location: news.php');// 用户名密码正确时，页面跳转至个人信息
             exit('登录成功');
         }
     }

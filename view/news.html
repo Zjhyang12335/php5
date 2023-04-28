@@ -10,7 +10,7 @@
 	<div class="top">
 		<div class="title">新闻发布系统</div>
 		<div class="nav">
-			<a href="#">发表新闻</a>
+			<a href="../add.php">发表新闻</a>
 		</div>
 	</div>
 	<div class="main">
@@ -22,9 +22,14 @@
 			</tr>
 			<?php foreach ($data as $v):?>
 				<tr>
-					<td class="news-title"><?php echo $v['title'];?></td>
+					<td class="news-title">
+						<a href="show.php?id=<?php echo $v['id'];?>"><?php echo $v['title'];?></a>
+					</td>
 					<td class="center"><?php echo $v['addtime'];?></td>
-					<td class="center">编辑 删除</td>
+					<td class="center">
+						<a href="edit.php?id=<?php echo $v['id'];?>">编辑</a>
+						<a href="./del.php?id=<?php echo $v['id'];?>" onclick="return confirm('确定删除该新闻吗？');">删除</a>
+					</td>
 				</tr>
 			<?php endforeach;?>
 		</table>

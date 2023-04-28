@@ -1,3 +1,3 @@
 <?php 
-require './news.php';
+require './login.php';
 ?>

@@ -20,6 +20,10 @@ INSERT INTO `news` (`id`, `title`, `content`, `addtime`) VALUES
 -- 查询语句
 select title,addtime from news order by addtime desc;
 
-create table `user` (
-`id` int(10), `username` varchar(128), `password` varchar(32)
-);
+CREATE TABLE `user` (
+  `id` int(10) UNSIGNED NOT NULL primary key AUTO_INCREMENT COMMENT '用户编号',
+  `username` varchar(60) NOT NULL COMMENT '用户名',  
+  `password` varchar(10) NOT NULL COMMENT '密码'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+insert into news(title, content) values ('新闻4', '44444');
