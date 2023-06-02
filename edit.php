@@ -11,7 +11,7 @@ if (!empty($_POST)){
     $data['content'] = isset($_POST['content']) ? htmlspecialchars($_POST['content']) : '';
 
     // :title :content是占位符，名称与data数组下标一致
-    $sql = 'update news set title=:title, content=:content where id=:id';
+    $sql = 'update info21180123 set title=:title, content=:content where id=:id';
     $stmt = $pdo->prepare($sql);// 预编译sql语句
     if (!$stmt->execute($data)){
         exit('修改数据失败'.$stmt->errorInfo());
@@ -20,7 +20,7 @@ if (!empty($_POST)){
 }
 
 
-$sql = 'select title, addtime, content from news where id=:id';
+$sql = 'select title, addtime, content from info21180123 where id=:id';
 $stmt = $pdo->prepare($sql);// 预编译sql语句
 if (!$stmt->execute($data)){
     exit('查询数据失败'.$stmt->errorInfo());

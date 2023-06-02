@@ -7,7 +7,7 @@ if (!empty($_POST)){
     // 连接数据库，插入数据
     require 'init.php';
     // :title :content是占位符，名称与data数组下标一致
-    $sql = 'insert into news(title, content) values (:title, :content)';
+    $sql = 'insert into info21180123(title, content) values (:title, :content)';
     $stmt = $pdo->prepare($sql);// 预编译sql语句
     if (!$stmt->execute($data)){
         exit('插入数据失败'.$stmt->errorInfo());
