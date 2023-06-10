@@ -1,0 +1,39 @@
+/* 导航 */
+.head{
+    width: 100%;
+    height: 91px;
+    /* background: url(../images/head_bg.jpg) repeat-x; */
+    border-bottom: 3px solid #d5d5d5;
+    background-color: oldlace;
+    text-align: center;
+    line-height: 91px;
+}
+.head ul{
+    width: 840px;
+    margin: 0 auto;
+    background-color: red;
+}
+.head ul li{
+    float: left;
+}
+a{
+    display: inline-block;
+    /* 行内块，宽和高生效 */
+    width: 119px;
+    height: 91px;
+}
+.head a:link, a:visited{
+    text-decoration: none;
+    color: blueviolet;
+    font-size: 16px;
+}
+.head a:hover{
+    background: url(../images/xuanfu.png);
+}
+
+*{
+    margin: 0 auto;
+    list-style: none;
+    /* background-image: url(../images/banner.jpg); */
+    /* background-repeat: no-repeat; */
+}

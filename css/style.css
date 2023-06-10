@@ -1,4 +1,4 @@
-body{margin:0;font-family:'Microsoft YaHei';background:url('../images/bg.png');}
+/*body{margin:0;font-family:'Microsoft YaHei';background:url('../images/bg.png');}*/
 .box{width:1001px;margin:0 auto;}
 .top{height:179px;background:url('../images/top.jpg');position:relative;}
 .title{padding-left:60px;color:#000;font-size:40px;letter-spacing:5px;line-height:160px;}

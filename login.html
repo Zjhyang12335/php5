@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="stylesheet" href="./css/reg.css">
+</head>
+<body>
+    <!-- 导航 -->
+    <div class="head">
+        <ul>
+            <li><a href="./index.php">首页</a></li>
+            <li><a href="./jieshao.php">店铺介绍</a></li>
+            <li><a href="./food.php">美食介绍</a></li>
+            <li><a href="./liliang.php">烘培力量</a></li>
+            <li><a href="./news.php">留言问答</a></li>
+            <li><a href="./reg.php">注册会员</a></li>
+        </ul>
+    </div>
+    <!-- <img src="./images/banner.jpg" alt=""> -->
+
+    <div class="text">
+        <h3>用甜品</h3>
+        <p>让复杂的世界更简单</p>
+    </div>
+
+    <!-- 盒子 -->
+    <div class="box">
+        <div class="guide">
+            <h3>欢迎登录</h3>
+            <p>没有帐号？<span id="login_btn"><a href="./reg.php">立即注册</a></span></p>
+        </div>
+        <div class="contentlogin">
+            <form action="" method="post" class="form">
+                <p><input type="text" name="username" minlength="1" placeholder="手机号/用户名/邮箱"></p>
+                <p><input type="password" name="password" minlength="1" autocomplete="off" value="" placeholder="密码"></p>
+                <p><input class="reg" type="submit" name="login" value="登录"></p>
+                <p>
+                    <input name="isAgree" type="checkbox" autocomplete="on">
+                    <label>阅读并接受</label><a target="_blank">《用户协议》</a>
+                </p>
+            </form>
+        </div>
+    </div>
+    <!-- 页脚模块 -->
+    <div class="foot">
+        @Zjhyang12335版权所有   2021-2022
+    </div>
+</body>
+</html>

@@ -16,7 +16,7 @@ if (!empty($_POST)){
     if (!$stmt->execute($data)){
         exit('修改数据失败'.$stmt->errorInfo());
     }
-    header('Location:news.php');// 重定向到新闻列表页面
+    header('Location:news.php');// 重定向到留言问答列表页面
 }
 
 
